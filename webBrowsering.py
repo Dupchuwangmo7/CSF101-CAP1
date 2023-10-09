@@ -77,3 +77,4 @@ send_message(headline)
 
 # Close the WebDriver
 driver.quit()
+#code from ai
