@@ -1,0 +1,21 @@
+
+
+from selenium import webdriver 
+# selenium automates web related task
+from selenium. webdriver.chrome. service import Service
+#manage the ChromeDriver service when working with Google Chrome through Selenium.
+from selenium. webdriver. chrome.options import Options
+#customize and configure how the Chrome browser behaves when controlled by Selenium.
+from webdriver_manager. chrome import ChromeDriverManager
+
+option = Options()
+#This allows you to run Chrome in the background without displaying a graphical user interface.
+option.add_experimental_option("detach", True)#used to configure options for the Chrome WebDriver in Selenium.
+#setting "detach" to True will keep the browser window open for you to do so.
+
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=option)
+#used to automate interactions with the Google Chrome browser according to your desired settings and preferences.
+driver.get("https://www.bbc.com/news")
+driver.maximize_window()
+
+
